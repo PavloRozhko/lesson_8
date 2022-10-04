@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 8</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header"></header>
+		<main class="main">
+			<div class="pseudo-container">
+				<h1 class="pseudo-title title">CSS: Pseudo-classes & Pseudo-elements</h1>
+				<div class="pseudo-classes">
+					<div class="pseudo-classes-info">
+						<h2 class="pseudo-classes-title title">Pseudo-classes</h2>
+						<p>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected
+							element(s).</p>
+						<p>Pseudo-classes let you apply a style to an element not only in relation to the content of the document
+							tree, but also in relation to external factors like the history of the navigator, the status of its
+							content , or the position of the mouse .</p>
+					</div>
+					<div class="pseudo-class-hover">
+						<h3 class="pseudo-class-hover-title title">Pseudo-class - :hover</h3>
+						<p>The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but
+							does not necessarily activate it. It is generally triggered when the user hovers over an element with the
+							cursor (mouse pointer).</p>
+						<div class="hover-example example">
+							<p>Please hover over this link:</p>
+							<div class="hover-link">
+								<a target="_blank" href="https://www.google.com.ua/" title="Link">https://www.google.com.ua/</a>
+							</div>
+						</div>
+						<p>Styles defined by the :hover pseudo-class will be overridden by any subsequent link-related pseudo-class
+							that has at least equal specificity.</p>
+						<p>With the help of a pseudo-class :hover, you can show hidden objects.</p>
+						<div class="hidden-examples">
+							<div class="hover-objects">
+								<div class="hidden-image example">
+									<p>In this way, you can show a hidden picture.</p>
+									<img src="img/brave.jpg" alt="Be brave like Ukraine!">
+								</div>
+								<div class="hidden-list example">
+									<ul class="hover-list-items">
+										<li class="hover-list-item">
+											<a href="#">Or links dropdown out of the list</a>
+											<ul class="hover-sublist">
+												<li><a href="#">Second level link</a></li>
+												<li><a href="#">Second level link</a></li>
+												<li><a href="#">Second level link</a></li>
+											</ul>
+										</li>
+										<li class="hover-list-item">
+											<a href="#">The next first level link</a>
+											<ul class="hover-sublist">
+												<li><a href="#">Second level link</a></li>
+												<li><a href="#">Second level link</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="some-object example">
+									<div class="some-card">
+										<div>Or any other object.</div>
+										<div class="hidden-object">
+											<a href="#">Click me</a>
+										</div>
+										<div>Please, hover this block.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pseudo-class-hover-note note">Note: The :hover pseudo-class is problematic on touchscreens.
+							Depending
+							on the browser, the
+							:hover pseudo-class might
+							never match, match only for a moment after touching an element, or continue to match even after the user
+							has stopped
+							touching and until the user touches another element. Web developers should make sure that content is
+							accessible on
+							devices with limited or non-existent hovering capabilities.
+						</div>
+					</div>
+					<div class="pseudo-active">
+						<h3 class="pseudo-active-title title">Pseudo-class - :active</h3>
+						<p>The :active CSS pseudo-class represents an element (such as a button) that is being activated by the
+							user. When using a mouse, "activation" typically starts when the user presses down the primary mouse
+							button.</p>
+						<p>The :active pseudo-class is commonly used on a and button elements. Other common targets of this
+							pseudo-class include elements that are contained in an activated element, and form elements that are being
+							activated through their associated label.</p>
+						<p>Styles defined by the :active pseudo-class will be overridden by any subsequent link-related pseudo-class
+							that has at least equal specificity. To style links appropriately, put the :active rule after all other
+							link-related rules.</p>
+						<div class="pseudo-active-example example">
+							<p>In order to see the effect of the pseudo-class, click on the link or button and do not release it.</p>
+							<div class="pseudo-active-link">
+								<a href="#">I'm a link</a>
+							</div>
+							<div class="pseudo-active-button">
+								<a href="#">I'm almost a button</a>
+							</div>
+						</div>
+						<div class="pseudo-active-note note">Note: On systems with multi-button mice, CSS specifies that the :active
+							pseudo-class must only apply to the primary button; on right-handed mice, this is typically the leftmost
+							button.</div>
+					</div>
+					<div class="pseudo-visited">
+						<h3 class="pseudo-visited-title title">Pseudo-class - :visited</h3>
+						<p>The :visited CSS pseudo-class represents links that the user has already visited. For privacy reasons,
+							the styles that
+							can be modified using this selector are very limited.</p>
+						<p>Styles defined by the :visited pseudo-class will be overridden by any subsequent link-related
+							pseudo-class that has at
+							least equal specificity. To style links appropriately, put the :visited rule before the :hover and :active
+							rules.</p>
+						<div class="pseudo-visited-example example">
+							<p>Try it</p>
+							<a target="_blank" href="https://fls.guru/">Freelance lifestyle</a>
+						</div>
+						<div class="pseudo-visited-note note">Note: For more information on these limitations and the reasons behind
+							them, see <a target="_blank"
+								href="https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and
+								the :visited selector</a>.</div>
+					</div>
+					<div class="pseudo-target">
+						<h3 class="pseudo-target-title title">Pseudo-class - :target.</h3>
+						<p>The :target CSS pseudo-class represents a unique element (the target element) with an id matching the
+							URL's fragment.</p>
+						<p>The :target pseudo-class can be used to highlight the portion of a page that has been linked to from a
+							table of contents.</p>
+						<div class="pseudo-target-example example">
+							<h2 class="target-example-title">Some header for example</h2>
+							<ul class="target-example-lsit">
+								<li class="target-example-link"><a href="#example-1"> Click the Link to see example.</a></li>
+								<li class="target-example-link"><a href="#example-2"> Click the Link to see example.</a></li>
+							</ul>
+							<div>
+								<p id="example-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laborum minima
+									excepturi fugit et voluptas officia repudiandae libero placeat. Quis nemo officia est fugit eum illo
+									repellat reiciendis voluptatem temporibus!</p>
+								<p id="example-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet minima eius saepe
+									doloribus suscipit sapiente, veniam accusamus, architecto consequuntur nemo ipsum quasi officia iure
+									impedit cupiditate eos et tenetur repudiandae?</p>
+							</div>
+						</div>
+					</div>
+					<div class="pseudo-child">
+						<h3 class="pseudo-child-title title">Pseudo-class - :first-child, :last-child & :nth-child().</h3>
+						<p>The :first-child CSS pseudo-class represents the first element among a group of sibling elements.</p>
+						<p>The :last-child CSS pseudo-class represents the last element among a group of sibling elements.</p>
+						<div class="pseudo-child-example example">
+							<p>Top 7 Programming Languages to Learn in 2022 <span>(hover the first and the last list item)</span>.</p>
+							<ol class="child-example-list">
+								<li title=":first-child">Python</li>
+								<li>Java</li>
+								<li>JavaScript</li>
+								<li>Kotlin</li>
+								<li>R</li>
+								<li>PHP</li>
+								<li <li title=":last-child">Go</li>
+							</ol>
+						</div>
+						<p>The :nth-child() CSS pseudo-class matches elements based on their position among a group of siblings.</p>
+						<p>Note that, in the element:nth-child() syntax, the child count includes children of any element type; but
+							it is
+							considered a match only if the element at that child position is of the specified element type.</p>
+						<p>:nth-child() takes a single argument that describes a pattern for matching element indices in a list of
+							siblings.
+							Element indices are 1-based.</p>
+						<p>odd - keyword value represents elements whose numeric position in a series of siblings is odd: 1, 3, 5,
+							etc.</p>
+						<p>even - keyword value represents elements whose numeric position in a series of siblings is even: 2, 4, 6,
+							etc.</p>
+						<div class="nth-child-example example">
+							<p>Release Dates Of the Most Most Common Programming Languages</p>
+							<ul class="nth-child-example-list">
+								<li>JavaScript - 1995</li>
+								<li>Java - 1995</li>
+								<li>C# - 2000</li>
+								<li>C - 1972</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pseudo-type">
+						<h3 class="pseudo-type-title">Pseudo-class - :first-of-type & :last-of-type.</h3>
+						<p>The :first-of-type CSS pseudo-class represents the first element of its type among a group of sibling
+							elements.</p>
+						<p>The :last-of-type CSS pseudo-class represents the last element of its type among a group of sibling
+							elements.</p>
+						<div class="pseudo-type-example example">
+							<h4 class="pseudo-type-example-title">Popular Technologies Used</h4>
+							<p>Ftontend</p>
+							<ol class="pseudo-type-list-front">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+								<li>ReactJs</li>
+								<li>Angular</li>
+								<li>VueJs</li>
+							</ol>
+							<p>Backend</p>
+							<ol class="pseudo-type-list-back">
+								<li>Java</li>
+								<li>Python</li>
+								<li>C#</li>
+								<li>JavaScript</li>
+								<li>SQL</li>
+								<li>Ruby</li>
+							</ol>
+						</div>
+					</div>
+					<div class="pseudo-not">
+						<h3 class="pseudo-not-title">Pseudo-class - :not.</h3>
+						<div class="pseudo-not-info">
+							<p>The :not() CSS pseudo-class represents elements that do not match a list of selectors. Since it
+								prevents
+								specific items from being selected, it is known as the negation pseudo-class.</p>
+							<p>The :not() pseudo-class has a number of quirks, tricks, and unexpected results that you should be aware
+								of before using it.</p>
+							<p>The :not() pseudo-class requires a comma-separated list of one or more selectors as its argument. The
+								list must not
+								contain another negation selector or a pseudo-element.</p>
+							<p>There are several unusual effects and outcomes when using :not() that you should keep in mind when
+								using
+								it:</p>
+							<ul class="pseudo-not-list">
+								<li>Useless selectors can be written using this pseudo-class. For example, :not(*) matches any element
+									which is not an
+									element, which is obviously nonsense, so the accompanying rule will never be applied.</li>
+								<li>This pseudo-class can increase the specificity of a rule. For example, #foo:not(#bar) will match the
+									same element as the
+									simpler #foo, but has the higher specificity of two id selectors.</li>
+								<li>The specificity of the :not() pseudo-class is replaced by the specificity of the most specific
+									selector in its
+									comma-separated argument of selectors; providing the same specificity as if it had been written
+									:not(:is(argument)).</li>
+								<li>:not(.foo) will match anything that isn't .foo, including html and body.</li>
+								<li>This selector will match everything that is "not an X". This may be surprising when used with
+									descendant combinators,
+									since there are multiple paths to select a target element. For instance, body :not(table) a will still
+									apply to links
+									inside a table, since tr, tbody, th, td, caption, etc. can all match the :not(table) part of the
+									selector.</li>
+								<li>You can negate several selectors at the same time. Example: :not(.foo, .bar) is equivalent to
+									:not(.foo):not(.bar).</li>
+								<li>If any selector passed to the :not() pseudo-class is invalid or not supported by the browser, the
+									whole rule will be
+									invalidated. The effective way to overcome this behavior is to use :is pseudo-class, which accepts a
+									forgiving selector
+									list. For example :not(.foo, :invalid-pseudo-class) will invalidate a whole rule, but :is(:not(.foo),
+									:not(:invalid-pseudo-class)) will match any element that isn't .foo.</li>
+							</ul>
+						</div>
+						<div class="pseudo-not-example example">
+							<p>In the following list of products, all fruits have no background color because they have a pseudo-class
+								:not() applied to them</p>
+							<ul class="pseudo-not-example-list">
+								<li>Apricot</li>
+								<li>Cabbage</li>
+								<li>Corn</li>
+								<li>Kiwi</li>
+								<li>Orange</li>
+								<li>Onion</li>
+								<li>Pear</li>
+								<li><img src="img/PPAP.jpg" alt="Pen-Pineapple-Apple-Pen"></li>
+								<li>Watermelon</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pseudo-focus">
+						<h3 class="pseudo-focus-title">Pseudo-class - :focus.</h3>
+						<p>The :focus CSS pseudo-class represents an element (such as a form input) that has received focus. It is
+							generally
+							triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.</p>
+						<div class="pseudo-focus-note note">Note: This pseudo-class applies only to the focused element itself. Use
+							:focus-within if you want to select an element
+							that contains a focused element.
+						</div>
+						<div class="pseudo-focus-example example">
+							<a class="pseudo-focus-link" href="#">A link with changes during the action of the pseudo-class
+								<span>:focus</span>.</a>
+						</div>
+					</div>
+				</div>
+				<div class="pseudo-elements">
+					<div class="pseudo-elements-info">
+						<h2 class="pseudo-elements-title title">Pseudo-elements</h2>
+						<p>A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected
+							element(s).
+							For example, ::first-line can be used to change the font of the first line of a paragraph.</p>
+						<div class="pseudo-elements-note note">Note: In contrast to pseudo-elements, pseudo-classes can be used to
+							style an element based on its state.
+						</div>
+						<p>You can use only one pseudo-element in a selector. It must appear after the simple selectors in the
+							statement.</p>
+						<div class="pseudo-elements-note note">Note: As a rule, double colons (::) should be used instead of a
+							single colon (:). This distinguishes pseudo-classes from
+							pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most
+							browsers
+							support both syntaxes for the original pseudo-elements.
+						</div>
+						<div class="pseudo-elements-note note">Note: The pseudo-elements generated by ::before and ::after are
+							contained by the element's formatting box, and thus
+							don't apply to replaced elements such as img, or to br elements.
+						</div>
+					</div>
+					<div class="pseudo-before">
+						<h3 class="pseudo-before-title">Pseudo-element - ::before.</h3>
+						<p>In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often
+							used to add
+							cosmetic content to an element with the content property. It is inline by default.</p>
+						<div class="pseudo-before-example example">
+							<p>In this example, dots before the list items added with pseudo-element ::before.</p>
+							<ul class="before-example-list">
+								<li>Milk</li>
+								<li>Butter</li>
+								<li>Bread</li>
+								<li>Apples</li>
+								<li>Meat</li>
+								<li>Mayo</li>
+								<li>Crisps</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pseudo-after">
+						<h3 class="pseudo-after-title">Pseudo-element - ::after.</h3>
+						<p>In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used
+							to add cosmetic content to an element with the content property. It is inline by default.</p>
+						<div class="pseudo-after-example example">
+							<p>
+								In this example, image icons after the list items added with pseudo-element ::after
+							</p>
+							<ul class="after-example-list">
+								<li>
+									Chrome
+								</li>
+								<li>
+									Edge
+								</li>
+								<li>
+									Firefox
+								</li>
+								<li>
+									Internet Explorer
+								</li>
+								<li>
+									Opera
+								</li>
+								<li>
+									Safari
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="next-page">
+				<a href="index.html">Previous</a>
+				<a href="game.html">Next page</a>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-info-container">All materials have taken from <a class="footer-info-link" target="_blank"
+					href="https://developer.mozilla.org/en-US/">MDN Web
+					Docs</a>.</div>
+		</footer>
+	</div>
+</body>
+</html>
